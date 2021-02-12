@@ -1,0 +1,162 @@
+html
+{
+	/*
+	width/height of the block = content`s width/height + margin
+	+ padding + border
+
+	"box-sizing: border-box" means that width and height
+	are the sizes of the block,
+	not the sizes of the content.
+	*/
+	box-sizing: border-box;
+}
+
+*, *::after, *::before
+{
+	box-sizing: inherit;
+}
+
+body
+{
+	font-family: 'Lato', sans-serif;
+	font-family: 400;
+	line-height: 24px;
+
+}
+
+
+a
+{
+	color: black;
+	text-decoration: none;
+
+}
+
+/*	HEADER 30-73
+================================
+================================
+================================*/
+.header
+{
+	border-top: 1px solid #3a83e5;
+}
+
+.container
+{
+	max-width: 1170px; /*maw1170 + tab*/
+	margin: 0 auto; /*
+	centering:
+	0 - top/bottom
+	auto - left/right
+	*/
+	padding: 0 15px;
+	/*p0-15
+	for content not to stuck near to borders
+	*/ 
+}
+
+.header__inner
+{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 87px; /*mh87 + tab*/
+}
+
+.menu__list
+{
+	display: flex;
+}
+
+.menu__list li
+{	
+	margin-left: 38px; /*ml38 + tab*/
+}
+
+.menu__list a
+{
+	font-size: 14px;
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+	color: #2f3f54;
+}
+
+
+/*TOP
+==============
+==============
+==============
+==============
+*/
+
+.top
+{
+	background-color: #3a84e5; /*bc*/
+	padding-top: 150px; /*pt150 +tab*/
+	padding-bottom: 180px; /*pb180 +tab*/
+}
+
+.top__inner /*for separation "top-info" and "top-images"*/
+{
+	display:flex;
+}
+
+.top-info
+{
+	max-width: 555px;
+	margin-right: 35px;
+	color: white;
+}
+
+/*use plugin CSSTractor:
+1. select code in html doc
+2. push right mouse button
+3. run css tractor
+
+result: ready selectors for tags*/
+
+
+/*.top-info__subtitle {}*/
+.top-info__title
+{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	font-size: 48px;
+	line-height: 52px;
+	text-transform: uppercase;
+}
+
+.top-info__description
+{
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 52px;
+	margin-bottom: 35px;
+}
+
+.top-info__description span
+{
+	font-size: 14px;
+	line-height: 24px;
+	display: block;
+	font-weight: 400;
+}
+
+.top-info__list {
+}
+.top-info__btn {
+}
+.top-info__btn-description {
+}
+.top-images {
+}
+.top-images__box {
+}
+.top-images__circle {
+}
+.top-images__title {
+}
+.top-images__price {
+}
+.top-images__date {
+}
