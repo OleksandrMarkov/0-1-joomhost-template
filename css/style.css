@@ -18,10 +18,11 @@ html
 
 body
 {
+	font-size: 14px; /*fz14 + tab*/
 	font-family: 'Lato', sans-serif;
 	font-family: 400;
 	line-height: 24px;
-
+	color: #4a6385;
 }
 
 
@@ -29,7 +30,7 @@ a
 {
 	color: black;
 	text-decoration: none;
-
+	display: inline-block;
 }
 
 /*	HEADER 30-73
@@ -82,7 +83,7 @@ a
 }
 
 
-/*TOP
+/*TOP 92-246
 ==============
 ==============
 ==============
@@ -137,26 +138,251 @@ result: ready selectors for tags*/
 .top-info__description span
 {
 	font-size: 14px;
+	font-weight: 400;
 	line-height: 24px;
 	display: block;
-	font-weight: 400;
 }
 
-.top-info__list {
+.top-info__list
+{
+	/*disable markers*/
+	list-style: none; 
+	margin-bottom: 50px; /*mb50 + tab*/
 }
-.top-info__btn {
+
+.top-info__list li
+{
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 27px;
+	position: relative;
+	padding-left: 24px;
+}
+
+.top-info__list li::before
+/*use a pseudo-element
+for a sign before list items*/
+{
+	content: "";
+	background-image: url(../images/list_item.png);
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	left: 0; /*begin at the left border*/
+	top: 50%;
+	transform: translateY(-50%); /**/
+}
+
+.top-info__btn
+{
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Lato', sans-serif;
+	line-height: 24px;
+	color: white;
+	text-transform: uppercase;
+
+	border: 3px solid white;
+	padding: 13px 44px;
+	border-radius: 25px;
 }
 .top-info__btn-description {
 }
-.top-images {
+.top-images
+{
+
 }
-.top-images__box {
+
+
+/*
+the circle is relative to the box
+*/
+.top-images__box
+{
+	position: relative;
 }
-.top-images__circle {
+
+.top-images__circle
+{
+	width: 230px;
+	height: 230px;
+	background-color: white;
+	border-radius: 50%; /*transform square to the circle*/
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /*align in center*/
+	align-items: center; /*to set in the circle`s center*/
+
+	position: absolute; /*it may be moved*/
+	/*the circle will be in position (top, right) relative to box*/
+	/*firstly set top = right = 0, then change
+	and choose best in browser elements*/
+	top:-40px;
+	right:-90px;
+
+	font-size: 14px;
+	color: #212121;
 }
-.top-images__title {
+
+.top-images__title
+{
+	text-align: left;
+	margin-bottom: 15px;
+	width: 140px;
 }
-.top-images__price {
+
+.top-images__price
+{
+	font-size: 54px;
+	font-weight: 700;
+	margin-bottom: 7px;
+
 }
-.top-images__date {
+
+.top-images__date
+{
+	text-align: right;
+	width: 140px;
+}
+
+/*PRICE 
+==============
+==============
+==============
+==============
+*/
+
+.price
+{
+	padding: 150px 0 180px;
+}
+
+.title
+{
+	color: #2f3f54;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 50px;
+}
+
+.title span
+{
+	color: #2575e7;
+}
+
+.price__description
+{ 
+	text-align: center;
+	max-width: 594px;
+	margin: 35px auto 125px;
+}
+
+.price__items
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.price-item
+{
+	max-width: 360px;
+	/*
+	box-shadow is copied from photoshop layout
+	*/
+	box-shadow: 0px 21px 49px 1px rgba(41, 44, 61, 0.15);
+	padding: 0 55px;
+
+
+	position: relative;
+	overflow: hidden; /*cut borders*/
+}
+
+.price-item__value
+{
+	width: 265px;
+	height: 465px;
+	border-radius: 135px;
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 33px;
+	font-weight: 700;
+
+	color: white;
+	background-color: #2575e7;
+
+	margin: 0 auto;
+
+	position: absolute;
+	top: -370px;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+
+	padding-bottom: 35px;
+}
+
+.price-item__value span
+{
+	font-size: 16px;
+}
+
+.price-item__images
+{
+	padding-top: 125px;
+	text-align: center;
+	margin-bottom: 35px;
+}
+
+.price-item__title 
+{
+	margin-bottom: 25px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 40px;
+
+	color: #267ae9;
+}
+
+.price-item__text
+{
+	margin-bottom: 50px;
+}
+
+.price-item__list
+{
+	margin-bottom: 75px;
+	list-style: none;
+}
+
+.price-item__list li
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	margin-bottom: 12px;
+	padding-left: 35px;
+
+	position: relative;	
+}
+
+.price-item__list li::before{
+	background-image: url(../images/check.png);
+	content: "";
+	position: absolute;
+	left: 0;
+	top:50%;
+	transform: translateY(-50%);
+	height: 11px;
+	width: 15px;
+}
+
+.price-item__btn 
+{
+
 }
