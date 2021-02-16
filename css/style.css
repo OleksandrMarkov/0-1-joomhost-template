@@ -64,6 +64,20 @@ a
 	min-height: 87px; /*mh87 + tab*/
 }
 
+.btn-menu
+{
+	width: 50px;
+	display: none;
+}
+
+.btn-menu div
+{
+	height: 5px;
+	margin-bottom: 10px;
+	background-color: red;
+}
+
+
 .menu__list
 {
 	display: flex;
@@ -534,9 +548,10 @@ the circle is relative to the box
 	margin: 0 -50px;
 }
 
-.reviews-slider .slick-track
+.reviews-slider .slick-slide
 {
-	margin: 0 50px;	
+	margin: 0 50px;
+	padding-bottom: 70px;	
 }
 
 .reviews-slider .slick-dots
@@ -544,7 +559,6 @@ the circle is relative to the box
 	list-style: none;
 	display: flex;
 	justify-content: center; /*jcc + tab*/
-	margin-top: 50px;
 	margin-bottom: 50px;
 }
 
@@ -622,4 +636,20 @@ the circle is relative to the box
 .reviews-box__author
 {
 
+}
+
+/*PARTNERS*/
+.partners-items
+{
+	margin-top: 195px;
+	margin-bottom: 105px;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+}
+
+.partners-items img
+{
+	min-height: 85px;
+	margin-left: 35px;
 }
